@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project name="ProcessIg-test">
+    <import file="ant.xml"/>
+    
+    <property name="dir.data" value="${ig.temp}/_data"/>
+    
+    <target name="onLoad.test" description="test" extensionOf="onLoad.extend">
+        <echo message="Started onLoad.test"/>
+        <mkdir dir="test"/>
+    </target>
+    
+    <target name="onGenerate.test-1" extensionOf="onGenerate.extend">
+       <echo message="...skipped onGenerate.test-1"/>
+    </target>
+    
+    <target name="onGenerate.test-2" extensionOf="onGenerate.extend">
+       <echo message="Started onGenerate.test-2"/>
+       <echo message="${ig.template}"/>
+       <echo message="${dir.schemas}"/>
+       <echo message="${ig.root}"/>
+       <echo message="${ig.temp}"/>
+       <echo message="${ig.scripts}"/>
+       <echo message="${dir.temp.includes}"/>
+       <echo message="${dir.template.includes}"/>
+    </target>
+    
+    <!-- this works to start meld -->
+<!--
+    <target name="onGenerate.test-3" extensionOf="onGenerate.extend" description="Executes a system command">
+       <property name="app" location="/usr/bin/meld"/>
+       <echo message="Running ${app}..."/>
+       <exec executable="${app}" spawn="true"/>
+    </target>
+-->
+<!--
+
+    <target name="onGenerate.copyResources" description="Copies generated resources as json into the _data folder" extensionOf="onGenerate.extend">
+       <echo message="...copying generated resources into data folder"/>
+       <copy file="${ig.temp}/_includes/ImplementationGuide-fhir.ig.experiment.03.json" todir="${ig.temp}/_data"/>
+    </target>
+-->
+
+<!--     <target name="onGenerate.copyJSON" extensionOf="onGenerate.extend">
+       <echo message="Started onGenerate.copyJSON"/>
+       <echo message="...copying generated resources into data folder"/>
+       <echo file="${dir.data}/info2.json">{
+  "ballotstatus":"${ballotstatus}",
+  "copyrightyear":"${copyrightyear}",
+  "excludexml":"${excludexml}",
+  "excludejson":"${excludejson}",
+  "excludettl":"${excludettl}",
+  "assets":"",
+  "child":"${additionalVersion}/",
+  "headingOffset":""
+}</echo>
+    </target> -->
+
+</project>

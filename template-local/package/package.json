@@ -1,0 +1,13 @@
+﻿{
+  "name": "robs.fhir.template",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "A FHIR Template",
+  "author": "Rob Eastwood",
+  "canonical": "https://about.me/robeastwood/fhir/templates/robs.fhir.template",
+  "base": "fhir.base.template",
+  "dependencies": {
+    "fhir.base.template": "current"
+  },
+  "version": "0.0.1"
+}
