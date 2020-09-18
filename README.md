@@ -12,7 +12,7 @@ An experimental, externally-template-driven FHIR implementation guide being used
 1. Add a file `./config.json` with the single entry for the path to the local ant script file
 1. Add the actual local ant script file; eg `./scripts/ant-local.xml`
 
-### Local sript file
+### Local script file
 This is a standard [Apache Ant](https://ant.apache.org/)<sup>TM</sup> script.
 
 See the [manual](https://ant.apache.org/manual/) for full guidance.
